@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="">
-   <div>
+
      <!-- Navbar -->
-    <nav class="bg-gray-800 bg-opacity-50 p-4 text-white navbar  fixed w-full">
+     <nav id="navbar" class="bg-gray-800 bg-opacity-50 p-4 text-white navbar fixed w-full z-10 transition-all duration-300">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl logo">No<span>Code</span></a>
             <div class="nav-links hidden md:flex md:gap-10">
@@ -23,47 +23,197 @@
                 <a href="#contact" class="ml-4 nav-link">Contact</a>
                 <a href="#courses" class="ml-4 nav-link">Courses</a>
             </div>
-         
             <a class="register-link cursor-pointer hidden md:flex" href="https://www.google.com">Register 
                 <span class="register-arrow material-symbols-outlined">arrow_outward</span>
             </a>
-
-            <!-- Menu Button -->
             <button id="menu-button" class="md:hidden focus:outline-none">
                 <span id="menu-icon" class="material-symbols-outlined">menu</span>
             </button>
         </div>
-
     </nav>
+    
 
     <!-- Main Section -->
-    <section class="bg-tranparant h-screen flex justify-center items-center text-white">
-        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-            <div class="md:hidden lg:mt-0 lg:col-span-5 flex w-full items-center justify-center mb-10 ">
-                <img src="./assets/images/hero.png" alt="mockup" class="h-56">
-            </div> 
-            <div class="mr-auto place-self-center lg:col-span-7">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">No Code Academy For Everyone</h1>
-                <p class="max-w-2xl mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Empowering individuals to achieve their career goals through innovative, hands-on learning. Whether you’re a beginner or looking to enhance your skills, we provide the resources you need to thrive in the tech industry.</p>
-                <a href="#" class="inline-flex items-center justify-center text-black px-5 py-3 text-base font-medium text-center bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                    Get Career Guidance
-                </a> 
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                    Explore Courses
-                    <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="./assets/images/hero.png" alt="mockup">
-            </div>                
+<!-- Main Section -->
+<section class="bg-transparent h-screen flex justify-center items-center text-white relative overflow-hidden">
+    <div id="blob-container" class="absolute inset-0 z-0"></div> <!-- Moved here -->
+    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 z-10">
+        <div class="md:hidden lg:mt-0 lg:col-span-5 flex w-full items-center justify-center mb-10 ">
+            <img src="./assets/images/hero.png" alt="mockup" class="h-56">
+        </div> 
+        <div class="mr-auto place-self-center lg:col-span-7">
+            <h1 class="hero-title max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">No Code Academy For Everyone</h1>
+            <p class="hero-description max-w-2xl mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Empowering individuals to achieve their career goals through innovative, hands-on learning. Whether you’re a beginner or looking to enhance your skills, we provide the resources you need to thrive in the tech industry.</p>
+            
+            <a href="#" class="inline-flex items-center justify-center text-black px-5 py-3 text-base font-medium text-center bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                Get Career Guidance
+            </a> 
+            <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                Explore Courses
+                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
         </div>
-    
-        <div id="blob-container"></div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <img src="./assets/images/hero.png" alt="mockup">
+        </div>                
+    </div>
+</section>
+
+
+<section class=" bg-white h-auto py-16 flex justify-center items-center text-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+    <div class="text-center">
+
+        <div class="flex flex-col md:flex-row md:space-x-10">
+            <div class="bg-white bg-opacity-20 rounded-lg p-6 shadow-lg mb-4 md:mb-0">
+                <h3 class="text-3xl font-semibold">200+</h3>
+                <p class="text-lg">Students Enrolled</p>
+            </div>
+            <div class="bg-white bg-opacity-20 rounded-lg p-6 shadow-lg mb-4 md:mb-0">
+                <h3 class="text-3xl font-semibold">200+</h3>
+                <p class="text-lg">Hours of Teaching</p>
+            </div>
+            <div class="bg-white bg-opacity-20 rounded-lg p-6 shadow-lg mb-4 md:mb-0">
+                <h3 class="text-3xl font-semibold">100+</h3>
+                <p class="text-lg">Success Stories</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+      <!-- Courses Section -->
+      <section id="courses" class="bg-transparant text-white h-auto py-16 flex justify-center items-center">
+        <div class="text-center">
+
+            <h2 class="text-4xl font-bold mb-6">Our Courses</h2>
+            <p class="mb-10">Explore our wide range of courses designed for every skill level.</p>
+            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+             
+             
+                <a href="javascript:void(0)">
+                    <div class="relative flex flex-col my-6 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-sm  rounded-lg w-96">
+                      <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80" alt="card-image" />
+                      </div>
+                      <div class="p-4">
+                        <div class="mb-4 rounded-full bg-cyan-600 py-0.5 px-2.5 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">
+                          Bussiness Analyst
+                        </div>
+                        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+                          Website Review Check
+                        </h6>
+                        <p class="text-slate-600 leading-normal font-light">
+                          The place is close to Barceloneta Beach and bus stop just 2 min by walk
+                          and near to &quot;Naviglio&quot; where you can enjoy the main night life in
+                          Barcelona.
+                        </p>
+                      </div>
+               
+                    </div> 
+                  </a>
+
+
+                  <a href="javascript:void(0)">
+                    <div class="relative flex flex-col my-6 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-sm rounded-lg w-96">
+                      <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
+                        <img src="./assets/images/uiux.jpg" alt="card-image" />
+                      </div>
+                      <div class="p-4">
+                        <div class="mb-4 rounded-full bg-cyan-600 py-0.5 px-2.5 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">
+                     Ui ux Developer
+                        </div>
+                        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+                          Website Review Check
+                        </h6>
+                        <p class="text-slate-600 leading-normal font-light">
+                          The place is close to Barceloneta Beach and bus stop just 2 min by walk
+                          and near to &quot;Naviglio&quot; where you can enjoy the main night life in
+                          Barcelona.
+                        </p>
+                      </div>
+                   
+                   
+                    </div> 
+                  </a>
+
+
+                  <a href="javascript:void(0)">
+                    <div class="relative flex flex-col my-6 bg-white shadow-sm bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10  rounded-lg w-96">
+                      <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
+                        <img src="./assets/images/cloud.jpg" alt="card-image" />
+                      </div>
+                      <div class="p-4">
+                        <div class="mb-4 rounded-full bg-cyan-600 py-0.5 px-2.5 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">
+                    Cloude Engineer
+                        </div>
+                        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
+                          Website Review Check
+                        </h6>
+                        <p class="text-slate-600 leading-normal font-light">
+                          The place is close to Barceloneta Beach and bus stop just 2 min by walk
+                          and near to &quot;Naviglio&quot; where you can enjoy the main night life in
+                          Barcelona.
+                        </p>
+                      </div>
+                   
+                  
+                    </div> 
+                  </a>
+
+
+             
+
+            </div>
+        </div>
     </section>
-    
-    
-    
-   </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-blue-100 h-auto py-16 flex justify-center items-center">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold mb-6">What Our Students Say</h2>
+            <p class="mb-10">Real experiences from our amazing community!</p>
+            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-lg italic">"This course changed my life! The hands-on projects were invaluable."</p>
+                    <h4 class="mt-4 font-semibold">- Student Name 1</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-lg italic">"I learned so much in such a short time. Highly recommend!"</p>
+                    <h4 class="mt-4 font-semibold">- Student Name 2</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-lg italic">"Amazing instructors and a supportive community!"</p>
+                    <h4 class="mt-4 font-semibold">- Student Name 3</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-800 h-auto py-16 flex justify-center items-center text-white">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold mb-6">Contact Us</h2>
+            <p class="mb-10">We'd love to hear from you!</p>
+            <form class="space-y-4 max-w-md mx-auto">
+                <input type="text" placeholder="Your Name" class="w-full p-3 rounded border border-gray-300">
+                <input type="email" placeholder="Your Email" class="w-full p-3 rounded border border-gray-300">
+                <textarea rows="4" placeholder="Your Message" class="w-full p-3 rounded border border-gray-300"></textarea>
+                <button type="submit" class="w-full p-3 text-white bg-blue-600 rounded">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 h-auto py-4 text-white">
+        <div class="text-center">
+            <p>&copy; 2024 NoCode Academy. All rights reserved.</p>
+            <div class="mt-2">
+                <a href="#" class="mx-2">Privacy Policy</a>
+                <a href="#" class="mx-2">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+   
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script> 
