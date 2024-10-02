@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoCode</title>
+    <title>NoCode Academy - Learn How To Become a Web Designer</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,210 +11,358 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="">
+<body class="font-sans bg-gray-900">
 
      <!-- Navbar -->
-     <nav id="navbar" class="bg-gray-800 bg-opacity-50 p-4 text-white navbar fixed w-full z-10 transition-all duration-300">
+     <nav id="navbar" class="bg-gray-800 bg-opacity-50 p-4 text-white fixed w-full z-10 transition-all duration-300">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl logo">No<span>Code</span></a>
-            <div class="nav-links hidden md:flex md:gap-10">
-                <a href="#home" class="ml-4 nav-link">Home</a>
-                <a href="#about" class="ml-4 nav-link">About</a>
-                <a href="#contact" class="ml-4 nav-link">Contact</a>
-                <a href="#courses" class="ml-4 nav-link">Courses</a>
+            <div class="hidden md:flex md:gap-10">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#courses" class="nav-link">Courses</a>
             </div>
-            <a class="register-link cursor-pointer hidden md:flex" href="https://www.google.com">Register 
-                <span class="register-arrow material-symbols-outlined">arrow_outward</span>
+            <a class="register-link cursor-pointer hidden md:flex items-center" href="https://www.google.com">Explore 
+                <span class="material-symbols-outlined ml-1">arrow_outward</span>
             </a>
             <button id="menu-button" class="md:hidden focus:outline-none">
                 <span id="menu-icon" class="material-symbols-outlined">menu</span>
             </button>
         </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-90">
+            <a href="#home" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Home</a>
+            <a href="#about" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">About</a>
+            <a href="#contact" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Contact</a>
+            <a href="#courses" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Courses</a>
+            <a href="https://www.google.com" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Explore 
+                <span class="material-symbols-outlined ml-1">arrow_outward</span>
+            </a>
+        </div>
     </nav>
     
 
     <!-- Main Section -->
-<!-- Main Section -->
-<section class="bg-transparent h-screen flex justify-center items-center text-white relative overflow-hidden">
-    <div id="blob-container" class="absolute inset-0 z-0"></div> <!-- Moved here -->
-    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 z-10">
-        <div class="md:hidden lg:mt-0 lg:col-span-5 flex w-full items-center justify-center mb-10 ">
-            <img src="./assets/images/hero.png" alt="mockup" class="h-56">
-        </div> 
-        <div class="mr-auto place-self-center lg:col-span-7">
-            <h1 class="hero-title max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">No Code Academy For Everyone</h1>
-            <p class="hero-description max-w-2xl mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Empowering individuals to achieve their career goals through innovative, hands-on learning. Whether you’re a beginner or looking to enhance your skills, we provide the resources you need to thrive in the tech industry.</p>
-            
-            <a href="#" class="inline-flex items-center justify-center text-black px-5 py-3 text-base font-medium text-center bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                Get Career Guidance
-            </a> 
-            <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Explore Courses
-                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a>
+    <section class="bg-transparent min-h-screen flex flex-col lg:flex-row justify-center items-center text-white relative overflow-hidden pt-20">
+        <div id="blob-container" class="absolute inset-0 z-0"></div>
+        <div class="container mx-auto flex flex-col-reverse lg:flex-row items-center lg:gap-16 px-4 py-8">
+            <div class="lg:w-1/2 flex flex-col justify-center">
+                <h1 class="hero-title text-3xl md:text-4xl xl:text-6xl font-extrabold tracking-tight leading-none mb-4">Supercharge Your Web Design Skills</h1>
+                <p class="hero-description text-gray-300 mb-6 md:text-lg lg:text-xl">Empowering individuals to achieve their career goals through innovative, hands-on learning. Whether you’re a beginner or looking to enhance your skills, we provide the resources you need to thrive in the tech industry.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#" class="inline-flex items-center justify-center text-black px-5 py-3 text-base font-medium bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">
+                       Find Right Course
+                    </a> 
+                    <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300">
+                       Why NoCode Academy?
+                        <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+
+                <div class="flex items-center p-4 rounded-lg mt-10 overflow-hidden bg-gray-800 bg-opacity-50">
+                  <div class="flex -space-x-3">
+                    <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
+                      <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1">
+                    </div>
+                    <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
+                      <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2">
+                    </div>
+                    <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
+                      <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/17960027/pexels-photo-17960027/free-photo-of-handsome-man-in-shirt-standing-by-red-light.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3">
+                    </div>
+                    <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
+                      <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/16228347/pexels-photo-16228347/free-photo-of-man-wearing-traditional-indian-costume-covered-with-paint.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 4">
+                    </div>
+                    <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
+                      <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/17348075/pexels-photo-17348075/free-photo-of-woman-in-eyeglasses-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 5">
+                    </div>
+                  </div>
+                  <div class="flex flex-col justify-center ml-4">
+                    <p class="text-sm font-semibold text-gray-200">NoCode Academy courses are rated:</p>
+                    <img src="./assets/images/rating.png" alt="Rating" class="w-40 mt-1">
+                  </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2 flex justify-center mb-10 lg:mb-0">
+                <img src="./assets/images/hero.png" alt="mockup" class="h-56 md:h-72 lg:h-full w-auto">
+            </div>
         </div>
-        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="./assets/images/hero.png" alt="mockup">
-        </div>                
-    </div>
-</section>
+    </section>
 
+    <!-- Designs Section -->
+    <section class="flex w-full h-screen justify-center items-center px-56 text-white flex-col">
+    <h6 class="text-sm md:text-lgxl text-red-200 font-bold mt-20">See The Difference</h6>
+    <h2 class="text-4xl md:text-6xl font-bold mb-5">Designs Our Students Created</h2>
+      <p class="text-center mb-20">Explore the remarkable designs created by our students after completing our courses.</p>
 
-<section class=" bg-white h-auto py-16 flex justify-center items-center text-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
-    <div class="text-center">
-
-        <div class="flex flex-col md:flex-row md:space-x-10">
-            <div class="bg-white bg-opacity-20 rounded-lg p-6 shadow-lg mb-4 md:mb-0">
-                <h3 class="text-3xl font-semibold">200+</h3>
-                <p class="text-lg">Students Enrolled</p>
-            </div>
-            <div class="bg-white bg-opacity-20 rounded-lg p-6 shadow-lg mb-4 md:mb-0">
-                <h3 class="text-3xl font-semibold">200+</h3>
-                <p class="text-lg">Hours of Teaching</p>
-            </div>
-            <div class="bg-white bg-opacity-20 rounded-lg p-6 shadow-lg mb-4 md:mb-0">
-                <h3 class="text-3xl font-semibold">100+</h3>
-                <p class="text-lg">Success Stories</p>
-            </div>
+      
+      <div class="flex w-full h-screen justify-center items-center ">
+        <div class="wrapper ">
+          <div class="itemLeft item1">
+              <img src="https://images.pexels.com/photos/28435066/pexels-photo-28435066/free-photo-of-ancient-lycian-rock-tombs-in-dalyan-turkiye.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1">
+          </div>
+          <div class="itemLeft item2">
+              <img src="https://images.pexels.com/photos/28302550/pexels-photo-28302550/free-photo-of-a-woman-sitting-on-a-stool-with-her-hair-in-a-bun.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2">
+          </div>
+          <div class="itemLeft item3">
+             <img src="https://images.pexels.com/photos/20991662/pexels-photo-20991662/free-photo-of-photo-of-the-bamburgh-castle-northumberland-uk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3">
+          </div>
+      
+         
         </div>
-    </div>
-</section>
+        <div class="wrapper">
+          <div class="itemRight item1">
+              <img src="https://images.pexels.com/photos/28435066/pexels-photo-28435066/free-photo-of-ancient-lycian-rock-tombs-in-dalyan-turkiye.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1">
+          </div>
+          <div class="itemRight item2">
+              <img src="https://images.pexels.com/photos/28302550/pexels-photo-28302550/free-photo-of-a-woman-sitting-on-a-stool-with-her-hair-in-a-bun.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2">
+          </div>
+          <div class="itemRight item3">
+             <img src="https://images.pexels.com/photos/20991662/pexels-photo-20991662/free-photo-of-photo-of-the-bamburgh-castle-northumberland-uk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3">
+          </div>
+        
+        </div>
+        <div class="wrapper ">
+          <div class="itemLeft item1">
+              <img src="https://images.pexels.com/photos/28435066/pexels-photo-28435066/free-photo-of-ancient-lycian-rock-tombs-in-dalyan-turkiye.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1">
+          </div>
+          <div class="itemLeft item2">
+              <img src="https://images.pexels.com/photos/28302550/pexels-photo-28302550/free-photo-of-a-woman-sitting-on-a-stool-with-her-hair-in-a-bun.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2">
+          </div>
+          <div class="itemLeft item3">
+             <img src="https://images.pexels.com/photos/20991662/pexels-photo-20991662/free-photo-of-photo-of-the-bamburgh-castle-northumberland-uk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3">
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm py-16">
+      <div class="container mx-auto px-6 md:px-12 text-center">
+          <div class="flex flex-col md:flex-row md:justify-around items-center space-y-8 md:space-y-0 md:space-x-6">
+              <!-- Card 1 -->
+              <div class="bg-white bg-opacity-20 hover:bg-opacity-30 transition duration-300 rounded-lg p-8 md:w-1/3 shadow-lg hover:shadow-2xl">
+                  <h3 class="text-4xl font-bold text-white">200+</h3>
+                  <p class="text-lg text-gray-300 mt-2">Students Enrolled</p>
+              </div>
+              <!-- Card 2 -->
+              <div class="bg-white bg-opacity-20 hover:bg-opacity-30 transition duration-300 rounded-lg p-8 md:w-1/3 shadow-lg hover:shadow-2xl">
+                  <h3 class="text-4xl font-bold text-white">200+</h3>
+                  <p class="text-lg text-gray-300 mt-2">Hours of Teaching</p>
+              </div>
+              <!-- Card 3 -->
+              <div class="bg-white bg-opacity-20 hover:bg-opacity-30 transition duration-300 rounded-lg p-8 md:w-1/3 shadow-lg hover:shadow-2xl">
+                  <h3 class="text-4xl font-bold text-white">100+</h3>
+                  <p class="text-lg text-gray-300 mt-2">Success Stories</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+    <!-- Courses Section -->
+    <section id="courses" class="bg-transparent text-white py-16 px-4">
+        <div class="container mx-auto text-center">
+          <h6 class="text-sm md:text-lgxl text-red-200 font-bold ">Most Popular</h6>
+          <h2 class="text-4xl md:text-6xl font-bold mb-5">Featured Courses
+          </h2>
+            <p class="text-center mb-20">Master UI/UX with our top-rated course or unlock a world of knowledge with our All Access program.
 
-      <!-- Courses Section -->
-      <section id="courses" class="bg-transparant text-white h-auto py-16 flex justify-center items-center">
-        <div class="text-center">
-
-            <h2 class="text-4xl font-bold mb-6">Our Courses</h2>
-            <p class="mb-10">Explore our wide range of courses designed for every skill level.</p>
-            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+            </p>
+      
+            <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
              
-             
-                <a href="javascript:void(0)">
-                    <div class="relative flex flex-col my-6 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-sm  rounded-lg w-96">
-                      <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80" alt="card-image" />
-                      </div>
-                      <div class="p-4">
-                        <div class="mb-4 rounded-full bg-cyan-600 py-0.5 px-2.5 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">
-                          Bussiness Analyst
-                        </div>
-                        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
-                          Website Review Check
-                        </h6>
-                        <p class="text-slate-600 leading-normal font-light">
-                          The place is close to Barceloneta Beach and bus stop just 2 min by walk
-                          and near to &quot;Naviglio&quot; where you can enjoy the main night life in
-                          Barcelona.
-                        </p>
-                      </div>
                
-                    </div> 
-                  </a>
-
-
-                  <a href="javascript:void(0)">
-                    <div class="relative flex flex-col my-6 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-sm rounded-lg w-96">
-                      <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                        <img src="./assets/images/uiux.jpg" alt="card-image" />
-                      </div>
-                      <div class="p-4">
-                        <div class="mb-4 rounded-full bg-cyan-600 py-0.5 px-2.5 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">
-                     Ui ux Developer
-                        </div>
-                        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
-                          Website Review Check
+              <a href="javascript:void(0)" class="block border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-md shadow-sm rounded-lg overflow-hidden">
+                    <!-- Image Section -->
+                    <div class="relative h-64 md:h-72 lg:h-80">
+                        <img src="./assets/images/uiux.jpg" alt="UI/UX Developer Course" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Content Section -->
+                    <div class="p-6">
+                        <h6 class="mb-4 text-2xl font-bold text-white">
+                            UI/UX MasterClass
                         </h6>
-                        <p class="text-slate-600 leading-normal font-light">
-                          The place is close to Barceloneta Beach and bus stop just 2 min by walk
-                          and near to &quot;Naviglio&quot; where you can enjoy the main night life in
-                          Barcelona.
+                        <p class="text-gray-300 leading-relaxed text-base md:text-lg">
+                            The most up-to-date and complete course to master Webflow!
                         </p>
-                      </div>
-                   
-                   
-                    </div> 
-                  </a>
-
-
-                  <a href="javascript:void(0)">
-                    <div class="relative flex flex-col my-6 bg-white shadow-sm bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10  rounded-lg w-96">
-                      <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                        <img src="./assets/images/cloud.jpg" alt="card-image" />
-                      </div>
-                      <div class="p-4">
-                        <div class="mb-4 rounded-full bg-cyan-600 py-0.5 px-2.5 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">
-                    Cloude Engineer
+                        <!-- Button Section -->
+                        <div class="flex flex-col md:flex-row gap-4 justify-center mt-6">
+                            <button class="bg-white hover:bg-red-700 text-black px-6 py-3 rounded-md transition-colors duration-300 ease-in-out">
+                                Learn More
+                            </button>
+                            <button class="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-red-700 transition-colors duration-300 ease-in-out">
+                                Purchase
+                            </button>
                         </div>
-                        <h6 class="mb-2 text-slate-800 text-xl font-semibold">
-                          Website Review Check
-                        </h6>
-                        <p class="text-slate-600 leading-normal font-light">
-                          The place is close to Barceloneta Beach and bus stop just 2 min by walk
-                          and near to &quot;Naviglio&quot; where you can enjoy the main night life in
-                          Barcelona.
-                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)" class="block border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
+              <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-md shadow-sm rounded-lg overflow-hidden">
+                  <!-- Image Section -->
+                  <div class="relative h-64 md:h-72 lg:h-80">
+                      <img src="./assets/images/bussiness.jpg" alt="UI/UX Developer Course" class="w-full h-full object-cover">
+                  </div>
+                  <!-- Content Section -->
+                  <div class="p-6">
+                      <h6 class="mb-4 text-2xl font-bold text-white">
+                        NoCode Academy All Access
+                      </h6>
+                      <p class="text-gray-300 leading-relaxed text-base md:text-lg">
+                        Our ultimate program to start a successful career in web design!
+                      </p>
+                      <!-- Button Section -->
+                      <div class="flex flex-col md:flex-row gap-4 justify-center mt-6">
+                          <button class="bg-white hover:bg-red-700 text-black px-6 py-3 rounded-md transition-colors duration-300 ease-in-out">
+                              Learn More
+                          </button>
+                          <button class="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-red-700 transition-colors duration-300 ease-in-out">
+                              Purchase
+                          </button>
                       </div>
-                   
-                  
-                    </div> 
-                  </a>
-
-
-             
+                  </div>
+              </div>
+          </a>
 
             </div>
         </div>
     </section>
+
+
+    <section id="courses" class=" text-white py-16 px-4">
+      <div class="container mx-auto text-center">
+        <!-- Section Header -->
+        <h6 class="text-sm md:text-lg text-red-200 font-bold  mb-2">The NoCode Advantage</h6>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6">Why Learn With Us?</h2>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-12">
+          Discover 3 compelling reasons to elevate your web design career with NoCode Academy and unlock your full potential.
+        </p>
+    
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <!-- Feature 1 -->
+          <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div class="mb-4">
+              <svg class="w-12 h-12 mx-auto text-red-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Learn at Your Own Pace</h3>
+            <p class="text-gray-200">
+              Access courses anytime, anywhere. Tailor your learning experience to fit your schedule.
+            </p>
+          </div>
+    
+          <!-- Feature 2 -->
+          <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div class="mb-4">
+              <svg class="w-12 h-12 mx-auto text-red-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Expert Instructors</h3>
+            <p class="text-gray-200">
+              Learn from industry professionals with years of experience in UI/UX design and development.
+            </p>
+          </div>
+    
+          <!-- Feature 3 -->
+          <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-md rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div class="mb-4">
+              <svg class="w-12 h-12 mx-auto text-red-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6h6v6m2 5H7a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Comprehensive Curriculum</h3>
+            <p class="text-gray-200">
+              From foundational principles to advanced techniques, our courses cover everything you need to succeed.
+            </p>
+          </div>
+        </div>
+    
+        <!-- Call to Action -->
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+          <a href="#courses" class="bg-white  text-black font-semibold py-3 px-6 rounded-md shadow-lg transition-colors duration-300">
+            Get Started
+          </a>
+          <a href="#about" class="bg-transparent border border-white text-white font-semibold py-3 px-6 rounded-md hover:bg-white hover:text-red-600 transition-colors duration-300">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </section>
+    
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="bg-blue-100 h-auto py-16 flex justify-center items-center">
-        <div class="text-center">
-            <h2 class="text-4xl font-bold mb-6">What Our Students Say</h2>
-            <p class="mb-10">Real experiences from our amazing community!</p>
-            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-lg italic">"This course changed my life! The hands-on projects were invaluable."</p>
-                    <h4 class="mt-4 font-semibold">- Student Name 1</h4>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-lg italic">"I learned so much in such a short time. Highly recommend!"</p>
-                    <h4 class="mt-4 font-semibold">- Student Name 2</h4>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-lg italic">"Amazing instructors and a supportive community!"</p>
-                    <h4 class="mt-4 font-semibold">- Student Name 3</h4>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="testimonials" class="bg-blue-900 py-16 px-4">
+      <div class="container mx-auto text-center text-white">
+          <h2 class="text-4xl font-bold mb-6">What Our Students Say</h2>
+          <p class="mb-10 text-gray-300">Real experiences from our amazing community!</p>
+  
+          <!-- Carousel Wrapper -->
+          <div class="relative w-full max-w-2xl mx-auto">
+              <div id="testimonial-carousel" class="overflow-hidden">
+                  <!-- Testimonial 1 -->
+                  <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-md">
+                      <p class="text-lg italic text-gray-200">"This course changed my life! The hands-on projects were invaluable."</p>
+                      <h4 class="mt-4 font-semibold text-white">- Student Name 1</h4>
+                  </div>
+                  <!-- Testimonial 2 -->
+                  <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-md hidden">
+                      <p class="text-lg italic text-gray-200">"I learned so much in such a short time. Highly recommend!"</p>
+                      <h4 class="mt-4 font-semibold text-white">- Student Name 2</h4>
+                  </div>
+                  <!-- Testimonial 3 -->
+                  <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-md hidden">
+                      <p class="text-lg italic text-gray-200">"Amazing instructors and a supportive community!"</p>
+                      <h4 class="mt-4 font-semibold text-white">- Student Name 3</h4>
+                  </div>
+              </div>
+  
+              <!-- Navigation Buttons -->
+              <div class="flex justify-between items-center mt-6">
+                  <button id="prev-btn" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded focus:outline-none">
+                      Previous
+                  </button>
+                  <button id="next-btn" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded focus:outline-none">
+                      Next
+                  </button>
+              </div>
+          </div>
+      </div>
+  </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-gray-800 h-auto py-16 flex justify-center items-center text-white">
-        <div class="text-center">
+    <section id="contact" class="bg-gray-800 py-16 px-4 text-white">
+        <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-6">Contact Us</h2>
-            <p class="mb-10">We'd love to hear from you!</p>
+            <p class="mb-10 text-gray-300">We'd love to hear from you!</p>
             <form class="space-y-4 max-w-md mx-auto">
-                <input type="text" placeholder="Your Name" class="w-full p-3 rounded border border-gray-300">
-                <input type="email" placeholder="Your Email" class="w-full p-3 rounded border border-gray-300">
-                <textarea rows="4" placeholder="Your Message" class="w-full p-3 rounded border border-gray-300"></textarea>
-                <button type="submit" class="w-full p-3 text-white bg-blue-600 rounded">Send Message</button>
+                <input type="text" placeholder="Your Name" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="email" placeholder="Your Email" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <textarea rows="4" placeholder="Your Message" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                <button type="submit" class="w-full p-3 text-white bg-blue-600 rounded hover:bg-blue-700">Send Message</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 h-auto py-4 text-white">
-        <div class="text-center">
+    <footer class="bg-gray-800 py-4 text-white text-center">
+        <div class="container mx-auto">
             <p>&copy; 2024 NoCode Academy. All rights reserved.</p>
             <div class="mt-2">
-                <a href="#" class="mx-2">Privacy Policy</a>
-                <a href="#" class="mx-2">Terms of Service</a>
+                <a href="#" class="mx-2 text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="mx-2 text-gray-400 hover:text-white">Terms of Service</a>
             </div>
         </div>
     </footer>
 
    
-  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script> 
     <script src="js/main.js"></script>

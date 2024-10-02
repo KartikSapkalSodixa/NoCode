@@ -88,3 +88,19 @@ window.addEventListener("scroll", function () {
         navbar.classList.remove("scrolled");
     }
 });
+
+
+const testimonials = document.querySelectorAll('#testimonial-carousel > div');
+let currentIndex = 0;
+
+document.getElementById('next-btn').addEventListener('click', function() {
+    testimonials[currentIndex].classList.add('hidden');
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    testimonials[currentIndex].classList.remove('hidden');
+});
+
+document.getElementById('prev-btn').addEventListener('click', function() {
+    testimonials[currentIndex].classList.add('hidden');
+    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+    testimonials[currentIndex].classList.remove('hidden');
+});

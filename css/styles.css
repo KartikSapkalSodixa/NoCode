@@ -3,7 +3,6 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: "Unbounded", sans-serif;
-
 }
 
 /* Root styles */
@@ -11,7 +10,7 @@ body {
     background-color: #181111;
     position: relative;
     overflow-x: hidden;
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -29,20 +28,14 @@ body {
     transition: transform 0.3s ease;
 }
 
-
 .scrolled {
     background-color: rgba(255, 255, 255, 0.1);
-    height: auto; /* This can be adjusted if needed */
-    display: flex; /* Flexbox layout */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    color: white; /* Text color */
-    background-clip: padding-box; /* Ensures background color doesn't bleed outside padding */
-    backdrop-filter: blur(4px); /* Adjust the blur effect as needed */
-    /* Optionally add more styles here if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    backdrop-filter: blur(4px);
 }
-
-
 
 .register-arrow,.register-link:hover {
     transform: translateY(-5px);
@@ -57,7 +50,6 @@ body {
     transform: translateY(-5px);
     color: #fff;
 }
-
 
 /* Blob Container */
 #blob-container {
@@ -106,15 +98,133 @@ body::after {
     height: 100vh;
 }
 
-/* Media Queries */
+/* Scroll Animations for Designs Section */
+@keyframes scrollUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+@keyframes scrollDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100%); }
+}
+
+.animate-scrollUp {
+    animation: scrollUp 30s linear infinite;
+}
+
+.animate-scrollDown {
+    animation: scrollDown 30s linear infinite;
+}
+
+/* Responsive Adjustments */
 @media only screen and (max-width: 768px) {
-    /* Add your mobile styles here */
+    /* Adjust blob sizes or positions if necessary */
+    .blob {
+        filter: blur(100px);
+    }
+
+    /* Adjust designs section images */
+    .wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .itemLeft,
+    .itemRight {
+        width: 100%;
+        height: auto;
+        animation: none;
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Add your tablet styles here */
+    /* Tablet specific styles */
+    .hero-title {
+        text-align: center;
+    }
+
+    .hero-description {
+        text-align: center;
+    }
+
+    .register-link {
+        justify-content:center;
+    }
+
+    /* Adjust designs section animation speed */
+    .animate-scrollUp {
+        animation-duration: 40s;
+    }
 }
 
-@media only screen and (min-width: 1025px) {
-    /* Add your desktop styles here */
-}
+/* General Styles */
+
+  
+  .wrapper {
+
+    display: flex;
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    height: 100%; 
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 40%,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  
+  @keyframes scrollUp {
+    to {
+      top: -90vh; /* Adjust for vertical scrolling */
+    }
+  }
+  
+  @keyframes scrollDown {
+    to {
+      bottom: -90vh; /* Adjust for vertical scrolling */
+    }
+  }
+  
+  .itemLeft,
+  .itemRight {
+    width: 30rem;
+    overflow: hidden;
+    height: 100%;
+  
+    position: absolute;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+  }
+  .itemLeft,
+  .itemRight img{
+object-fit:cover ;
+  }
+  .itemLeft {
+    top: max(calc(500px * 3), 100%); 
+    animation-name: scrollUp;
+  }
+  
+  .itemRight {
+    bottom: max(calc(500px * 3), calc(100% + 500px)); 
+    animation-name: scrollDown;
+  }
+  
+  .item1 {
+    animation-delay: calc(30s / 3 * (3 - 1) * -1);
+  }
+  
+  .item2 {
+    animation-delay: calc(30s / 3 * (3 - 2) * -1);
+  }
+  
+  .item3 {
+    animation-delay: calc(30s / 3 * (3 - 3) * -1);
+  }
+  
