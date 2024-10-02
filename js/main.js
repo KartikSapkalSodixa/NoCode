@@ -90,17 +90,25 @@ window.addEventListener("scroll", function () {
 });
 
 
-const testimonials = document.querySelectorAll('#testimonial-carousel > div');
+const testimonialItems = document.getElementById("testimonial-items");
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+
 let currentIndex = 0;
 
-document.getElementById('next-btn').addEventListener('click', function() {
-    testimonials[currentIndex].classList.add('hidden');
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    testimonials[currentIndex].classList.remove('hidden');
+const testimonials = document.querySelectorAll("#testimonial-items > div");
+const totalTestimonials = testimonials.length;
+
+function updateCarousel() {
+  testimonialItems.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalTestimonials - 1;
+  updateCarousel();
 });
 
-document.getElementById('prev-btn').addEventListener('click', function() {
-    testimonials[currentIndex].classList.add('hidden');
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-    testimonials[currentIndex].classList.remove('hidden');
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex < totalTestimonials - 1) ? currentIndex + 1 : 0;
+  updateCarousel();
 });
