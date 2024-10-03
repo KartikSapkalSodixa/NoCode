@@ -48,7 +48,7 @@ body {
 
 .nav-link:hover {
     transform: translateY(-5px);
-    color: #fff;
+    color: #FF0000;
 }
 
 /* Blob Container */
@@ -228,3 +228,18 @@ object-fit:cover ;
     animation-delay: calc(30s / 3 * (3 - 3) * -1);
   }
   
+
+  .course-hero{
+    background-image:
+    linear-gradient(
+      to bottom,
+      transparent 99%,
+      #959595 100%),
+    linear-gradient(
+      to right, 
+      #000000 99%,
+      #dadada 100%);
+  background-size:
+    100px 100px,
+    100px 100px;
+  }

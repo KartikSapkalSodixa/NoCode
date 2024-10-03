@@ -112,3 +112,5 @@ nextBtn.addEventListener("click", () => {
   currentIndex = (currentIndex < totalTestimonials - 1) ? currentIndex + 1 : 0;
   updateCarousel();
 });
+
+
