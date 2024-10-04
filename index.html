@@ -13,104 +13,105 @@
 </head>
 <body class="font-sans bg-gray-900">
 
-     <!-- Navbar -->
-     <div class="bg-white w-full h-12 fixed z-10 flex justify-center items-center">
-      <div class="flex justify-between gap-10 items-center">
-        <div class="bg-black text-white rounded-lg px-2 py-1">New</div>
-        <p class="font-bold text-lg">Web Design MasterClass</p>
-        <a href="#" class="underline text-blue-600">30% off + 2x mentoring</a>
-        <div id="countdown" class="bg-black text-white rounded-lg px-2 py-1 flex items-center space-x-2">
-          <span class="clock-icon">⏰</span>
-          <span id="days" class="mr-1">0</span><span class="mr-2">Days</span>
-          <span id="hours" class="mr-1">0</span><span class="mr-2">Hours</span>
-          <span id="minutes" class="mr-1">0</span><span class="mr-2">Mins</span>
-          <span id="seconds" class="mr-1">0</span><span>Secs</span>
+  
+    <!-- Top Navbar -->
+    <div class="bg-white w-screen h-12 fixed z-20 flex justify-center items-center overflow-hidden ">
+      <div class="flex justify-between gap-1 md:gap-10 items-center container mx-auto px-1 md:px-4">
+          <div class="bg-black text-white rounded-lg px-1 md:px-2 py-0 md:py-1 hidden md:block">New</div>
+          <p class="font-bold text-sm md:text-lg">Web Design MasterClass</p>
+          <a href="#" class="hidden md:block underline text-sm text-blue-600">30% off + 2x mentoring</a>
+          <div id="countdown" class="bg-black text-white rounded-lg px-1 py-0 md:px-2 md:py-1 flex items-center space-x-2">
+              <span class="clock-icon hidden md:block">⏰</span>
+              <span id="days" class="md:mr-1 ">0</span><span class="mr-1">Days</span>
+              <span id="hours" class="md:mr-1 ">0</span><span class="mr-1">Hours</span>
+              <span id="minutes" class="md:mr-1 ">0</span><span class="mr-1">Mins</span>
+              <span id="seconds" class="md:mr-1 ">0</span><span>Secs</span>
+          </div>
       </div>
-      
+  </div>
+  
+  <!-- Main Navbar -->
+  <nav id="navbar" class="bg-gray-800 bg-opacity-50 p-4 mt-12 text-white fixed w-full z-10 transition-all duration-300">
+      <div class="container mx-auto flex justify-between items-center">
+          <a href="./index.html" class="text-2xl logo">No<span>Code</span></a>
+          <div class="hidden md:flex md:gap-10">
+              <a href="./index.html" class="nav-link">Home</a>
+              <a href="./about.html" class="nav-link">About</a>
+              <a href="./contact.html" class="nav-link">Contact</a>
+              <a href="./course.html" class="nav-link">Courses</a>
+          </div>
+          <a class="register-link cursor-pointer hidden md:flex items-center" href="./course.html">Explore 
+              <span class="material-symbols-outlined ml-1">arrow_outward</span>
+          </a>
+          <button id="menu-button" class="md:hidden focus:outline-none">
+              <span id="menu-icon" class="material-symbols-outlined">menu</span>
+          </button>
       </div>
-    </div>
-    
-     <nav id="navbar" class="bg-gray-800 bg-opacity-50 p-4 mt-12 text-white fixed w-full z-10 transition-all duration-300">
-    
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="./index.html" class="text-2xl logo">No<span>Code</span></a>
-            <div class="hidden md:flex md:gap-10">
-                <a href="./index.html" class="nav-link">Home</a>
-                <a href="./about.html" class="nav-link">About</a>
-                <a href="./contact.html" class="nav-link">Contact</a>
-                <a href="./course.html" class="nav-link">Courses</a>
-            </div>
-            <a class="register-link cursor-pointer hidden md:flex items-center" href="./course.html">Explore 
-                <span class="material-symbols-outlined ml-1">arrow_outward</span>
-            </a>
-            <button id="menu-button" class="md:hidden focus:outline-none">
-                <span id="menu-icon" class="material-symbols-outlined">menu</span>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-90">
-            <a href="./index.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Home</a>
-            <a href="#about" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">About</a>
-            <a href="#contact" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Contact</a>
-            <a href="#courses" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Courses</a>
-            <a href="./course.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Explore 
-                <span class="material-symbols-outlined ml-1">arrow_outward</span>
-            </a>
-        </div>
-    </nav>
-    
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-90 absolute top-full left-0 w-full z-30 transition-all duration-300">
+          <a href="./index.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Home</a>
+          <a href="./about.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">About</a>
+          <a href="./contact.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Contact</a>
+          <a href="./course.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Courses</a>
+          <a href="./course.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 flex items-center">
+              Explore 
+              <span class="material-symbols-outlined ml-1">arrow_outward</span>
+          </a>
+      </div>
+  </nav>
 
-    <!-- Main Section -->
-    <section class="bg-transparent min-h-screen flex flex-col lg:flex-row justify-center items-center text-white relative overflow-hidden pt-20">
-        <div id="blob-container" class="absolute inset-0 z-0"></div>
-        <div class="container mx-auto flex flex-col-reverse lg:flex-row items-center lg:gap-16 px-4 py-8">
-            <div class="lg:w-1/2 flex flex-col justify-center">
-                <h1 class="hero-title text-3xl md:text-4xl xl:text-6xl font-extrabold tracking-tight leading-none mb-4">Supercharge Your Web Design Skills</h1>
-                <p class="hero-description text-gray-300 mb-6 md:text-lg lg:text-xl">Empowering individuals to achieve their career goals through innovative, hands-on learning. Whether you’re a beginner or looking to enhance your skills, we provide the resources you need to thrive in the tech industry.</p>
-                
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="./course.html" class="inline-flex items-center justify-center text-black px-5 py-3 text-base font-medium bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">
-                       Find Right Course
-                    </a> 
-                    <a href="#whyNocode" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300">
-                       Why NoCode Academy?
-                        <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </a>
-                </div>
+  <!-- Main Section -->
+  <section class="bg-transparent min-h-screen flex flex-col lg:flex-row justify-center items-center text-white relative overflow-hidden pt-32">
+      <div id="blob-container" class="absolute inset-0 z-0"></div>
+      <div class="container mx-auto flex flex-col-reverse lg:flex-row items-center lg:gap-16 px-4 py-8">
+          <div class="lg:w-1/2 flex flex-col justify-center">
+              <h1 class="hero-title text-3xl md:text-4xl xl:text-6xl font-extrabold tracking-tight leading-none mb-4">Supercharge Your Web Design Skills</h1>
+              <p class="hero-description text-gray-300 mb-6 md:text-lg lg:text-xl">Empowering individuals to achieve their career goals through innovative, hands-on learning. Whether you’re a beginner or looking to enhance your skills, we provide the resources you need to thrive in the tech industry.</p>
+              
+              <div class="flex flex-col sm:flex-row gap-4">
+                  <a href="./course.html" class="inline-flex items-center justify-center text-black px-5 py-3 text-base font-medium bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">
+                     Find Right Course
+                  </a> 
+                  <a href="#whyNocode" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300">
+                     Why NoCode Academy?
+                      <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </a>
+              </div>
 
-                <div class="flex items-center p-4 rounded-lg mt-10 overflow-hidden bg-gray-800 bg-opacity-50">
-                  <div class="flex -space-x-3">
-                    <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
-                      <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1">
-                    </div>
-                    <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
-                      <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2">
-                    </div>
-                    <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
-                      <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/17960027/pexels-photo-17960027/free-photo-of-handsome-man-in-shirt-standing-by-red-light.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3">
-                    </div>
-                    <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
-                      <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/16228347/pexels-photo-16228347/free-photo-of-man-wearing-traditional-indian-costume-covered-with-paint.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 4">
-                    </div>
-                    <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
-                      <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/17348075/pexels-photo-17348075/free-photo-of-woman-in-eyeglasses-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 5">
-                    </div>
+              <div class="flex items-center p-4 rounded-lg mt-10 overflow-hidden bg-gray-800 bg-opacity-50">
+                <div class="flex -space-x-3">
+                  <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
+                    <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1">
                   </div>
-                  <div class="flex flex-col justify-center ml-4">
-                    <p class="text-sm font-semibold text-gray-200">NoCode Academy courses are rated:</p>
-                    <img src="./assets/images/rating.png" alt="Rating" class="w-40 mt-1">
+                  <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
+                    <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2">
+                  </div>
+                  <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
+                    <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/17960027/pexels-photo-17960027/free-photo-of-handsome-man-in-shirt-standing-by-red-light.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3">
+                  </div>
+                  <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
+                    <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/16228347/pexels-photo-16228347/free-photo-of-man-wearing-traditional-indian-costume-covered-with-paint.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 4">
+                  </div>
+                  <div class="h-12 w-12 rounded-full overflow-hidden border-2 border-gray-100">
+                    <img class="object-cover h-full w-full" src="https://images.pexels.com/photos/17348075/pexels-photo-17348075/free-photo-of-woman-in-eyeglasses-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 5">
                   </div>
                 </div>
-            </div>
+                <div class="flex flex-col justify-center ml-4">
+                  <p class="text-sm font-semibold text-gray-200">NoCode Academy courses are rated:</p>
+                  <img src="./assets/images/rating.png" alt="Rating" class="w-40 mt-1">
+                </div>
+              </div>
+          </div>
 
-            <div class="w-full lg:w-1/2 flex justify-center mb-10 lg:mb-0">
-                <img src="./assets/images/hero.png" alt="mockup" class="h-56 md:h-72 lg:h-full w-auto">
-            </div>
-        </div>
-    </section>
+          <div class="w-full lg:w-1/2 flex justify-center mb-10 lg:mb-0">
+              <img src="./assets/images/hero.png" alt="mockup" class="h-56 md:h-72 lg:h-full w-auto">
+          </div>
+      </div>
+  </section>
 
     <!-- Designs Section -->
-    <section class="flex w-full h-screen justify-center items-center px-56 text-white flex-col">
+    <section id="courses" class="bg-transparent text-white py-16 px-4">
+      <div class="container mx-auto text-center">
     <h6 class="text-sm md:text-lgxl text-red-200 font-bold mt-20">See The Difference</h6>
     <h2 class="text-4xl md:text-6xl font-bold mb-5">Designs Our Students Created</h2>
       <p class="text-center mb-20">Explore the remarkable designs created by our students after completing our courses.</p>
@@ -142,7 +143,7 @@
           </div>
         
         </div>
-        <div class="wrapper ">
+        <div class="wrapper  ">
           <div class="itemLeft item1">
               <img src="./assets/images/screenshot.png" alt="Image 1">
           </div>
@@ -155,6 +156,7 @@
           
         </div>
       </div>
+      </div>
     </section>
     
     <!-- Stats Section -->
@@ -162,17 +164,17 @@
       <div class="container mx-auto px-6 md:px-12 text-center">
           <div class="flex flex-col md:flex-row md:justify-around items-center space-y-8 md:space-y-0 md:space-x-6">
               <!-- Card 1 -->
-              <div class="bg-white bg-opacity-20 hover:bg-opacity-30 transition duration-300 rounded-lg p-8 md:w-1/3 shadow-lg hover:shadow-2xl">
+              <div class="bg-white w-full bg-opacity-20 hover:bg-opacity-30 transition duration-300 rounded-lg p-8 md:w-1/3 shadow-lg hover:shadow-2xl">
                   <h3 class="text-4xl font-bold text-white">200+</h3>
                   <p class="text-lg text-gray-300 mt-2">Students Enrolled</p>
               </div>
               <!-- Card 2 -->
-              <div class="bg-white bg-opacity-20 hover:bg-opacity-30 transition duration-300 rounded-lg p-8 md:w-1/3 shadow-lg hover:shadow-2xl">
+              <div class="bg-white w-full bg-opacity-20 hover:bg-opacity-30 transition duration-300 rounded-lg p-8 md:w-1/3 shadow-lg hover:shadow-2xl">
                   <h3 class="text-4xl font-bold text-white">200+</h3>
                   <p class="text-lg text-gray-300 mt-2">Hours of Teaching</p>
               </div>
               <!-- Card 3 -->
-              <div class="bg-white bg-opacity-20 hover:bg-opacity-30 transition duration-300 rounded-lg p-8 md:w-1/3 shadow-lg hover:shadow-2xl">
+              <div class="bg-white w-full bg-opacity-20 hover:bg-opacity-30 transition duration-300 rounded-lg p-8 md:w-1/3 shadow-lg hover:shadow-2xl">
                   <h3 class="text-4xl font-bold text-white">100+</h3>
                   <p class="text-lg text-gray-300 mt-2">Success Stories</p>
               </div>
@@ -238,7 +240,8 @@
                           <button href="" class="inline-block bg-red-500 hover:bg-red-600 text-white text-lg font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out">
                               Learn More
                           </button>
-                          <button  href="https://wa.me/917888282660?text=I'm%20interested%20in%20UI/UX%20course" class="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-red-700 transition-colors duration-300 ease-in-out">
+                          <button  href="https://wa.me/919226883054?text=I%20am%20interested%20in%20your%20UI/UX%20MasterClass%20and%20would%20like%20more%20information.
+" class="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-red-700 transition-colors duration-300 ease-in-out">
                               Purchase
                           </button>
                       </div>
@@ -307,7 +310,8 @@
           <a href="./course.html" class="inline-block bg-red-500 hover:bg-red-600 text-white text-lg font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out">
             Get Started
           </a>
-          <a href="https://wa.me/917888282660?text=I'm%20interested%20in%20UI/UX%20course" class="bg-transparent border border-white text-white font-semibold py-3 px-6 rounded-md hover:bg-white hover:text-red-600 transition-colors duration-300">
+          <a href="https://wa.me/919226883054?text=I%20am%20interested%20in%20your%20UI/UX%20MasterClass%20and%20would%20like%20more%20information.
+" class="bg-transparent border border-white text-white font-semibold py-3 px-6 rounded-md hover:bg-white hover:text-red-600 transition-colors duration-300">
             Learn More
           </a>
         </div>
@@ -316,158 +320,175 @@
     
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-16 px-4 text-white bg-gray-900">
-      <div class="container mx-auto text-center">
-        <h6 class="text-sm md:text-lg text-red-400 font-bold  mb-2">The NoCode Pride</h6>
-        <h2 class="text-4xl md:text-6xl font-bold mb-6">Our Student Us?</h2>
-        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-12">
-          Discover what our students say about their experience at NoCode Academy.
-        </p>
-    
-        <!-- Carousel Wrapper -->
-        <div class="bg-neutral-950">
-          <section class="max-w-5xl mx-auto w-full px-10 py-10">
-              <div class="flex items-center justify-center flex-col gap-y-2 py-5">
 
-                  <div class="grid grid-cols-1 lg:grid-cols-5 gap-5 w-full">
-                      <!-- Review 1 -->
-                      <div class="border p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between">
-                          <div class="flex flex-col gap-y-3.5">
-                              <p class="font-bold text-xl text-white">Transformative Learning Experience</p>
-                              <p class="font-medium text-white">The UI/UX course transformed my design skills and boosted my confidence. The hands-on projects were incredibly helpful.</p>
-                          </div>
-                          <div class="flex gap-2  items-center ">
-                              <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
-                                  <span class="text-white font-bold">👤</span>
-                              </div>
-                              <div class="flex flex-col items-start">
-                              <p class="pt-2 text-sm font-semibold text-white">Anita Sharma</p>
-                              <p class="text-sm font-medium text-slate-100/70">Designer from Delhi</p>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Review 2 -->
-                      <div class="border p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between">
-                          <div class="flex flex-col gap-y-3.5">
-                              <p class="font-bold text-xl text-white">Comprehensive Curriculum</p>
-                              <p class="font-medium text-white">The course offered a comprehensive curriculum that covered all aspects of UI/UX design. Highly recommend!</p>
-                          </div>
-                          <div class="flex gap-2  items-center ">
-                              <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
-                                  <span class="text-white font-bold">👤</span>
-                              </div>
-                              <div class="flex flex-col items-start">
-                              <p class="pt-2 text-sm font-semibold text-white">Rajesh Patel</p>
-                              <p class="text-sm font-medium text-slate-100/70">Product Manager from Gujarat</p>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Review 3 -->
-                      <div class="border p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between">
-                          <div class="flex flex-col gap-y-3.5">
-                              <p class="font-bold text-xl text-white">Practical Approach</p>
-                              <p class="font-medium text-white">The practical approach to learning helped me apply my skills in real-world scenarios. A great investment for my career!</p>
-                          </div>
-                          <div class="flex gap-2  items-center ">
-                              <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
-                                  <span class="text-white font-bold">👤</span>
-                              </div>
-                              <div class="flex flex-col items-start">
-                              <p class="pt-2 text-sm font-semibold text-white">Meera Iyer</p>
-                              <p class="text-sm font-medium text-slate-100/70">UX Researcher from Tamil Nadu</p>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Review 4 -->
-                      <div class="border p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between">
-                          <div class="flex flex-col gap-y-3.5">
-                              <p class="font-bold text-xl text-white">Excellent Faculty</p>
-                              <p class="font-medium text-white">The faculty was incredibly knowledgeable and supportive. They made learning enjoyable and engaging.</p>
-                          </div>
-                          <div class="flex gap-2  items-center ">
-                              <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
-                                  <span class="text-white font-bold">👤</span>
-                              </div>
-                              <div class="flex flex-col items-start">
-                              <p class="pt-2 text-sm font-semibold text-white">Vikram Joshi</p>
-                              <p class="text-sm font-medium text-slate-100/70">Web Designer from Maharashtra</p>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Review 5 -->
-                      <div class="border p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between">
-                        <div class="flex flex-col gap-y-3.5">
-                            <p class="font-bold text-xl text-white">Valuable Networking</p>
-                            <p class="font-medium text-white">I made valuable connections with fellow students and industry professionals during this course.</p>
-                        </div>
-                        <div class="flex gap-2  items-center ">
-                            <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
-                                <span class="text-white font-bold">👤</span>
-                            </div>
-                            <div class="flex flex-col items-start">
-                              
-                            <p class="pt-2 text-sm font-semibold text-white">Arjun Mehta</p>
-                            <p class="text-sm font-medium text-slate-100/70">UI Developer from Rajasthan</p>
-                            </div>
-                        </div>
-                    </div>
-                      <div class="border p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between">
-                          <div class="flex flex-col gap-y-3.5">
-                              <p class="font-bold text-xl text-white">User-Centric Design Focus</p>
-                              <p class="font-medium text-white">This course taught me the importance of user-centric design, which is now at the core of my projects.</p>
-                          </div>
-                          <div class="flex gap-2  items-center ">
-                              <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
-                                  <span class="text-white font-bold">👤</span>
-                              </div>
-                              <div class="flex flex-col  items-start ">
-                              <p class="pt-2 text-sm font-semibold text-white">Sneha Gupta</p>
-                              <p class="text-sm font-medium text-slate-100/70">Graphic Designer from West Bengal</p>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Review 6 -->
-                      
-                      <!-- Review 7 -->
-                      <div class="border p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between">
-                          <div class="flex flex-col gap-y-3.5">
-                              <p class="font-bold text-xl text-white">Hands-On Projects</p>
-                              <p class="font-medium text-white">The hands-on projects allowed me to apply my knowledge effectively, making me job-ready!</p>
-                          </div>
-                          <div class="flex gap-2 items-center">
-                              <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
-                                  <span class="text-white font-bold">👤</span>
-                              </div>
-                              <div class="flex flex-col items-start">
-                              <p class="pt-2 text-sm font-semibold text-white">Pooja Reddy</p>
-                              <p class="text-sm font-medium text-slate-100/70">Product Designer from Karnataka</p>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Review 8 -->
-                      <div class="border p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between">
-                          <div class="flex flex-col gap-y-3.5">
-                              <p class="font-bold text-xl text-white">Engaging Community</p>
-                              <p class="font-medium text-white">The community of learners was engaging and supportive. I felt encouraged throughout the course.</p>
-                          </div>
-                          <div class="flex gap-2  items-center ">
-                              <div class="w-10 h-10  rounded-full bg-gray-600 flex items-center justify-center">
-                                  <span class="text-white font-bold">👤</span>
-                              </div>
-                            <div class="flex flex-col items-start">
-                              <p class="pt-2 text-sm font-semibold text-white">Nisha Desai</p>
-                              <p class="text-sm font-medium text-slate-100/70">UX Designer from Gujarat</p>
-                            </div>
-                          </div>
-                      </div>
-               
-                  </div>
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-16 px-4 text-white bg-gray-900">
+  <div class="container mx-auto text-center">
+    <h6 class="text-sm md:text-lg text-red-400 font-bold mb-2">The NoCode Pride</h6>
+    <h2 class="text-4xl md:text-6xl font-bold mb-6">Our Students Say?</h2>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-12">
+      Discover what our students say about their experience at NoCode Academy.
+    </p>
+
+    <!-- Carousel Wrapper -->
+    <div class="bg-neutral-950 p-4 rounded-lg">
+      <section class="max-w-5xl mx-auto w-full px-4 py-10">
+        <div class="flex items-center justify-center flex-col gap-y-2 py-5">
+
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-5 w-full">
+            <!-- Review 1 -->
+            <div class="border w-full p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 
+                        col-span-1 lg:col-span-2 flex flex-col gap-y-10 justify-between">
+              <div class="flex flex-col gap-y-3.5">
+                <p class="font-bold text-xl text-white">Transformative Learning Experience</p>
+                <p class="font-medium text-white">The UI/UX course transformed my design skills and boosted my confidence. The hands-on projects were incredibly helpful.</p>
               </div>
-          </section>
-      </div>
-      
-      </div>
-    </section>
+              <div class="flex gap-2 items-center">
+                <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
+                  <span class="text-white font-bold">👤</span>
+                </div>
+                <div class="flex flex-col items-start">
+                  <p class="pt-2 text-sm font-semibold text-white">Anita Sharma</p>
+                  <p class="text-sm font-medium text-slate-100/70">Designer from Delhi</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="border w-full p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 
+                        col-span-1 lg:col-span-3 flex flex-col gap-y-10 justify-between">
+              <div class="flex flex-col gap-y-3.5">
+                <p class="font-bold text-xl text-white">Comprehensive Curriculum</p>
+                <p class="font-medium text-white">The course offered a comprehensive curriculum that covered all aspects of UI/UX design. Highly recommend!</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
+                  <span class="text-white font-bold">👤</span>
+                </div>
+                <div class="flex flex-col items-start">
+                  <p class="pt-2 text-sm font-semibold text-white">Rajesh Patel</p>
+                  <p class="text-sm font-medium text-slate-100/70">Product Manager from Gujarat</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="border w-full p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 
+                        col-span-1 lg:col-span-3 flex flex-col gap-y-10 justify-between">
+              <div class="flex flex-col gap-y-3.5">
+                <p class="font-bold text-xl text-white">Practical Approach</p>
+                <p class="font-medium text-white">The practical approach to learning helped me apply my skills in real-world scenarios. A great investment for my career!</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
+                  <span class="text-white font-bold">👤</span>
+                </div>
+                <div class="flex flex-col items-start">
+                  <p class="pt-2 text-sm font-semibold text-white">Meera Iyer</p>
+                  <p class="text-sm font-medium text-slate-100/70">UX Researcher from Tamil Nadu</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="border w-full p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 
+                        col-span-1 lg:col-span-2 flex flex-col gap-y-10 justify-between">
+              <div class="flex flex-col gap-y-3.5">
+                <p class="font-bold text-xl text-white">Excellent Faculty</p>
+                <p class="font-medium text-white">The faculty was incredibly knowledgeable and supportive. They made learning enjoyable and engaging.</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
+                  <span class="text-white font-bold">👤</span>
+                </div>
+                <div class="flex flex-col items-start">
+                  <p class="pt-2 text-sm font-semibold text-white">Vikram Joshi</p>
+                  <p class="text-sm font-medium text-slate-100/70">Web Designer from Maharashtra</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="border w-full p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 
+                        col-span-1 lg:col-span-2 flex flex-col gap-y-10 justify-between">
+              <div class="flex flex-col gap-y-3.5">
+                <p class="font-bold text-xl text-white">Valuable Networking</p>
+                <p class="font-medium text-white">I made valuable connections with fellow students and industry professionals during this course.</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
+                  <span class="text-white font-bold">👤</span>
+                </div>
+                <div class="flex flex-col items-start">
+                  <p class="pt-2 text-sm font-semibold text-white">Arjun Mehta</p>
+                  <p class="text-sm font-medium text-slate-100/70">UI Developer from Rajasthan</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="border w-full p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 
+                        col-span-1 lg:col-span-3 flex flex-col gap-y-10 justify-between">
+              <div class="flex flex-col gap-y-3.5">
+                <p class="font-bold text-xl text-white">User-Centric Design Focus</p>
+                <p class="font-medium text-white">This course taught me the importance of user-centric design, which is now at the core of my projects.</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
+                  <span class="text-white font-bold">👤</span>
+                </div>
+                <div class="flex flex-col items-start">
+                  <p class="pt-2 text-sm font-semibold text-white">Sneha Gupta</p>
+                  <p class="text-sm font-medium text-slate-100/70">Graphic Designer from West Bengal</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 7 -->
+            <div class="border w-full p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 
+                        col-span-1 lg:col-span-3 flex flex-col gap-y-10 justify-between">
+              <div class="flex flex-col gap-y-3.5">
+                <p class="font-bold text-xl text-white">Hands-On Projects</p>
+                <p class="font-medium text-white">The hands-on projects allowed me to apply my knowledge effectively, making me job-ready!</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
+                  <span class="text-white font-bold">👤</span>
+                </div>
+                <div class="flex flex-col items-start">
+                  <p class="pt-2 text-sm font-semibold text-white">Pooja Reddy</p>
+                  <p class="text-sm font-medium text-slate-100/70">Product Designer from Karnataka</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 8 -->
+            <div class="border w-full p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 
+                        col-span-1 lg:col-span-2 flex flex-col gap-y-10 justify-between">
+              <div class="flex flex-col gap-y-3.5">
+                <p class="font-bold text-xl text-white">Engaging Community</p>
+                <p class="font-medium text-white">The community of learners was engaging and supportive. I felt encouraged throughout the course.</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center">
+                  <span class="text-white font-bold">👤</span>
+                </div>
+                <div class="flex flex-col items-start">
+                  <p class="pt-2 text-sm font-semibold text-white">Nisha Desai</p>
+                  <p class="text-sm font-medium text-slate-100/70">UX Designer from Gujarat</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+
+
     <!-- Contact Section -->
     <section id="contact" class="bg-gray-800 py-16 px-4 text-white">
       <div class="container mx-auto text-center">
@@ -485,7 +506,8 @@
             Can’t find the answer you’re looking for? Not sure which course is right for you? 
             Please chat with our friendly team.
           </p>
-          <a href="https://wa.me/917888282660?text=I'm%20interested%20in%20UI/UX%20course"
+          <a href="https://wa.me/919226883054?text=I%20am%20interested%20in%20your%20UI/UX%20MasterClass%20and%20would%20like%20more%20information.
+"
              class="inline-block bg-red-500 hover:bg-red-600 text-white text-lg font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out">
              Get in Touch
           </a>
@@ -510,31 +532,55 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script> 
     <script src="js/main.js"></script>
     <script>
-          const targetDate = new Date("October 5, 2024 12:00:00").getTime();
+      // Countdown Timer
+      const targetDate = new Date("October 5, 2024 12:00:00").getTime();
 
-// Update the countdown every second
-const countdownInterval = setInterval(() => {
-  const now = new Date().getTime();
-  const distance = targetDate - now;
+      // Update the countdown every second
+      const countdownInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
 
-  // Time calculations
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Time calculations
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result
-  document.getElementById("days").innerText = days;
-  document.getElementById("hours").innerText = hours;
-  document.getElementById("minutes").innerText = minutes;
-  document.getElementById("seconds").innerText = seconds;
+        // Display the result
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
 
-  // If the countdown is over
-  if (distance < 0) {
-    clearInterval(countdownInterval);
-    document.getElementById("countdown").innerHTML = "Expired";
-  }
-}, 1000);
-    </script>
+        // If the countdown is over
+        if (distance < 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown").innerHTML = "Expired";
+        }
+      }, 1000);
+
+
+
+      // JavaScript to toggle mobile menu visibility
+      document.addEventListener('DOMContentLoaded', function () {
+          const menuButton = document.getElementById('menu-button');
+          const mobileMenu = document.getElementById('mobile-menu');
+          const menuIcon = document.getElementById('menu-icon');
+
+          // Toggle menu visibility on button click
+          menuButton.addEventListener('click', function () {
+              mobileMenu.classList.toggle('hidden'); // Toggle the hidden class
+
+              // Toggle between "menu" and "close" icon
+              if (menuIcon.textContent.trim() === 'menu') {
+                  menuIcon.textContent = 'close';
+              } else {
+                  menuIcon.textContent = 'menu';
+              }
+          });
+      });
+
+</script>
+
 </body>
 </html>

@@ -13,51 +13,51 @@
 </head>
 <body class="font-sans bg-gray-900">
 
-     <!-- Navbar -->
-     <div class="bg-white w-full h-12 fixed z-10 flex justify-center items-center">
-      <div class="flex justify-between gap-10 items-center">
-        <div class="bg-black text-white rounded-lg px-2 py-1">New</div>
-        <p class="font-bold text-lg">Web Design MasterClass</p>
-        <a href="#" class="underline text-blue-600">30% off + 2x mentoring</a>
-        <div id="countdown" class="bg-black text-white rounded-lg px-2 py-1 flex items-center space-x-2">
-          <span class="clock-icon">⏰</span>
-          <span id="days">0 </span>  Days 
-          <span id="hours">0 </span> Hours 
-          <span id="minutes">0 </span> Mins 
-          <span id="seconds">0 </span> Secs
+   <!-- Top Navbar -->
+   <div class="bg-white w-screen h-12 fixed z-20 flex justify-center items-center overflow-hidden ">
+    <div class="flex justify-between gap-1 md:gap-10 items-center container mx-auto px-1 md:px-4">
+        <div class="bg-black text-white rounded-lg px-1 md:px-2 py-0 md:py-1 hidden md:block">New</div>
+        <p class="font-bold text-sm md:text-lg">Web Design MasterClass</p>
+        <a href="#" class="hidden md:block underline text-sm text-blue-600">30% off + 2x mentoring</a>
+        <div id="countdown" class="bg-black text-white rounded-lg px-1 py-0 md:px-2 md:py-1 flex items-center space-x-2">
+            <span class="clock-icon hidden md:block">⏰</span>
+            <span id="days" class="md:mr-1 ">0</span><span class="mr-1">Days</span>
+            <span id="hours" class="md:mr-1 ">0</span><span class="mr-1">Hours</span>
+            <span id="minutes" class="md:mr-1 ">0</span><span class="mr-1">Mins</span>
+            <span id="seconds" class="md:mr-1 ">0</span><span>Secs</span>
         </div>
-      </div>
     </div>
-    
-     <nav id="navbar" class="bg-gray-800 bg-opacity-50 p-4 mt-12 text-white fixed w-full z-10 transition-all duration-300">
-    
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="./index.html" class="text-2xl logo">No<span>Code</span></a>
-            <div class="hidden md:flex md:gap-10">
-                <a href="./index.html" class="nav-link">Home</a>
-                <a href="./about.html" class="nav-link">About</a>
-                <a href="./contact.html" class="nav-link">Contact</a>
-                <a href="./course.html" class="nav-link">Courses</a>
-            </div>
-            <a class="register-link cursor-pointer hidden md:flex items-center" href="./course.html">Explore 
-                <span class="material-symbols-outlined ml-1">arrow_outward</span>
-            </a>
-            <button id="menu-button" class="md:hidden focus:outline-none">
-                <span id="menu-icon" class="material-symbols-outlined">menu</span>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-90">
-            <a href="./index.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Home</a>
-            <a href="#about" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">About</a>
-            <a href="#contact" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Contact</a>
-            <a href="#courses" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Courses</a>
-            <a href="./course.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Explore 
-                <span class="material-symbols-outlined ml-1">arrow_outward</span>
-            </a>
-        </div>
-    </nav>
+</div>
 
+<!-- Main Navbar -->
+<nav id="navbar" class="bg-gray-800 bg-opacity-50 p-4 mt-12 text-white fixed w-full z-10 transition-all duration-300">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="./index.html" class="text-2xl logo">No<span>Code</span></a>
+        <div class="hidden md:flex md:gap-10">
+            <a href="./index.html" class="nav-link">Home</a>
+            <a href="./about.html" class="nav-link">About</a>
+            <a href="./contact.html" class="nav-link">Contact</a>
+            <a href="./course.html" class="nav-link">Courses</a>
+        </div>
+        <a class="register-link cursor-pointer hidden md:flex items-center" href="./course.html">Explore 
+            <span class="material-symbols-outlined ml-1">arrow_outward</span>
+        </a>
+        <button id="menu-button" class="md:hidden focus:outline-none">
+            <span id="menu-icon" class="material-symbols-outlined">menu</span>
+        </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-90 absolute top-full left-0 w-full z-30 transition-all duration-300">
+        <a href="./index.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Home</a>
+        <a href="./about.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">About</a>
+        <a href="./contact.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Contact</a>
+        <a href="./course.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">Courses</a>
+        <a href="./course.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 flex items-center">
+            Explore 
+            <span class="material-symbols-outlined ml-1">arrow_outward</span>
+        </a>
+    </div>
+</nav>
      <section class="pt-56 pb-16 text-center text-white">
         <div class="container mx-auto">
             <h1 class="text-4xl font-bold mb-4">About NoCode Academy</h1>
